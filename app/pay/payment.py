@@ -1,5 +1,5 @@
-from pay.order import Order
-from pay.processor import PaymentProcessor
+from app.pay.order import Order
+from app.pay.processor import PaymentProcessor
 
 
 def pay_order(order: Order):
@@ -8,6 +8,6 @@ def pay_order(order: Order):
     card = input("pls enter your card number: ")
     month = int(input("pls enter a card exp month: "))
     year = int(input("pls enter the card exp year: "))
-    payment_processor = PaymentProcessor("6cbbubo-nui7f-asdf4-98h87nyc3")
+    payment_processor = PaymentProcessor("correct api key, but its BAD to leave it here")
     payment_processor.charge(card, month, year, amount=order.total)
     order.pay()
